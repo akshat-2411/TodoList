@@ -1,0 +1,275 @@
+/* General Container Styling */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  transition: background-color 0.5s;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.center-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  transition: background-color 0.5s, transform 0.4s;
+}
+
+.center-container:hover {
+  transform: translateY(-5px);
+}
+
+.app-heading {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  transition: color 0.3s;
+  animation: slideIn 0.7s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+hr {
+  margin: 10px 0;
+  border: 0.5px solid #ddd;
+}
+
+/* Input Section Styling */
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  animation: scaleIn 0.7s ease;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.input-box-todo {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.input-box-todo:focus {
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
+}
+
+input[type="date"],
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.add-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: bounceIn 0.8s ease;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dark Mode Button */
+.dark-mode-toggle {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #495057;
+  transform: translateY(-3px);
+}
+
+/* List Section */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  animation: fadeInUp 0.7s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-item:hover {
+  background-color: #e2e6ea;
+  transform: translateX(5px);
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-complete {
+  color: green;
+  cursor: pointer;
+}
+
+.icon-delete {
+  color: red;
+  cursor: pointer;
+}
+
+.icon-edit {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.icon-complete:hover,
+.icon-delete:hover,
+.icon-edit:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+/* Filter Buttons */
+.filter-buttons button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.filter-buttons button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .center-container {
+  background-color: #333;
+}
+
+.dark-mode .app-heading {
+  color: #ffffff;
+}
+
+.dark-mode .input-box-todo,
+.dark-mode input[type="date"],
+.dark-mode select {
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode ul {
+  background-color: #444;
+}
+
+.dark-mode .list-item {
+  background-color: #555;
+}
+
+.dark-mode .filter-buttons button {
+  background-color: #007bff;
+}
+
+.dark-mode .filter-buttons button:hover {
+  background-color: #0056b3;
+}
